@@ -35,7 +35,7 @@ Here are your details — save them now:
 > **📅 Date:** Tuesday 10 March 2026
 > **🕖 Time:** 7:00 AM AEDT (Sydney)
 > **💻 Platform:** Zoom (link below)
-> **🔗 Zoom Link:** {{zoom_link}}
+> **🔗 Zoom Link:** https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1
 
 ---
 
@@ -109,7 +109,7 @@ When you have your PKS set up:
 **Your seat details:**
 
 > **📅 Tuesday 10 March 2026 · 7:00 AM AEDT**
-> **🔗 Zoom Link:** {{zoom_link}}
+> **🔗 Zoom Link:** https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1
 
 Add to calendar if you haven't yet → [Google] [Apple] [Outlook]
 
@@ -164,7 +164,7 @@ If you miss it, you miss it.
 > | New York (EST) | Mon 9 Mar · 3:00 PM |
 > | Los Angeles (PST) | Mon 9 Mar · 12:00 PM |
 >
-> **🔗 Zoom Link:** {{zoom_link}}
+> **🔗 Zoom Link:** https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1
 
 Set your alarm tonight. I'll see you in the morning.
 
@@ -188,7 +188,7 @@ Two hours from now we go live.
 
 I don't want a lost Zoom link to be the reason you miss this — so here it is again, right at the top:
 
-**🔗 {{zoom_link}}**
+**🔗 https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1**
 
 Click it, test it, and save it somewhere you'll find it in two hours.
 
@@ -230,7 +230,7 @@ Hi {{first_name}},
 
 The room is open and people are already joining. Your seat is reserved — but only if you show up.
 
-**🔗 Join now: {{zoom_link}}**
+**🔗 Join now: https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1**
 
 Jump in now so you're settled before we begin. There'll be a few minutes of informal chat while everyone arrives — it's a good chance to say hello and get comfortable.
 
@@ -247,7 +247,7 @@ Jump in now so you're settled before we begin. There'll be a few minutes of info
 
 This is it. Don't miss the start.
 
-**🔗 {{zoom_link}}**
+**🔗 https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1**
 
 See you in there,
 
@@ -269,13 +269,13 @@ Hi {{first_name}},
 
 If you're seeing this, now is the time to jump in. Don't let the first few minutes be a reason to skip — we'll be running for the next 45 minutes and there's still plenty of time to get full value.
 
-**🔗 Join now — we're already live: {{zoom_link}}**
+**🔗 Join now — we're already live: https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1**
 
 The room is energised, the demonstrations have started, and the Q&A at the end is where the real gold is.
 
 Every minute you wait is a minute of the session you miss.
 
-**🔗 {{zoom_link}}**
+**🔗 https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1**
 
 Come on in.
 
@@ -291,7 +291,7 @@ Shane
 2. **Wait steps:** Use GHL's "Wait Until" or "Wait" action to schedule each email at the correct time relative to the event date
 3. **Personalisation tags:**
    - `{{first_name}}` → Contact's first name field
-   - `{{zoom_link}}` → Replace with the actual Zoom link before activating the workflow (or use a custom field/value)
+   - `https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1` → Replace with the actual Zoom link before activating the workflow (or use a custom field/value)
 4. **From name:** Shane Fozard
 5. **From email:** support@reachingimpact.com
 6. **Reply-to:** support@reachingimpact.com
@@ -309,7 +309,8 @@ Shane
 
 ### Before Going Live Checklist
 
-- [ ] Replace `{{zoom_link}}` with actual Zoom meeting URL throughout all emails
+- [x] Replace `https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1` with actual Zoom meeting URL throughout all emails
+  - URL: `https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1`
 - [ ] Verify sending domain is authenticated in GHL (SPF, DKIM, DMARC)
 - [ ] Test the full sequence with a personal email address
 - [ ] Confirm calendar links in Email 1 point to the correct date/time

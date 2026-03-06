@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 // Set to true when the bonus video is ready to show
 const SHOW_STEP_3 = false;
 
-const ZOOM_LINK = "https://zoom.us/j/REPLACE_WITH_YOUR_ZOOM_LINK";
+const ZOOM_LINK = "https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1";
 const WEBINAR_TITLE = "Hypnotherapists: How to Get the Most Out of Google's NotebookLM AI";
 const WEBINAR_DATE_DISPLAY = "Tuesday 10 March 2026 at 7:00 AM AEDT";
 // ISO 8601 for calendar links (UTC equivalent of 7:00 AM AEDT = 8:00 PM UTC on 9 March)

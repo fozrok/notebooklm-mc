@@ -15,6 +15,9 @@ import { LocalWebinarTime, useLocalWebinarTime } from "@/components/LocalWebinar
 import { useEffect, useState } from "react";
 
 // ── Config — update ZOOM_LINK before going live ───────────────────────────────
+// Set to true when the bonus video is ready to show
+const SHOW_STEP_3 = false;
+
 const ZOOM_LINK = "https://zoom.us/j/REPLACE_WITH_YOUR_ZOOM_LINK";
 const WEBINAR_TITLE = "Hypnotherapists: How to Get the Most Out of Google's NotebookLM AI";
 const WEBINAR_DATE_DISPLAY = "Tuesday 10 March 2026 at 7:00 AM AEDT";
@@ -296,7 +299,7 @@ export default function ThankYou() {
         >
           Your free seat for the{" "}
           <strong style={{ color: "#F0EDE6" }}>NotebookLM Masterclass</strong> is confirmed.
-          Complete the three steps below to make sure you don't miss a thing.
+          Complete the {SHOW_STEP_3 ? "three" : "two"} steps below to make sure you don't miss a thing.
         </p>
 
         {/* Date pill */}
@@ -422,8 +425,8 @@ export default function ThankYou() {
             </div>
           </StepCard>
 
-          {/* ── STEP 3: Bonus Video ── */}
-          <StepCard step="3" title="Watch This Bonus Training While You Wait">
+          {/* ── STEP 3: Bonus Video — set SHOW_STEP_3 = true to enable ── */}
+          {SHOW_STEP_3 && <StepCard step="3" title="Watch This Bonus Training While You Wait">
             <p
               className="leading-relaxed"
               style={{ color: "rgba(240,237,230,0.75)", fontFamily: "var(--font-body)" }}
@@ -466,7 +469,7 @@ export default function ThankYou() {
                 allowFullScreen
               />
             </div>
-          </StepCard>
+          </StepCard>}
 
         </div>
       </section>

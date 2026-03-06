@@ -32,8 +32,9 @@ You're registered. Your free seat for the **NotebookLM Masterclass** is confirme
 
 Here are your details — save them now:
 
-> **📅 Date:** Tuesday 10 March 2026
-> **🕖 Time:** 7:00 AM AEDT (Sydney)
+> 🇦🇺 Tue 10 Mar · 7AM AEDT, 6AM AEST
+> 🇺🇸 Mon 9 Mar · 3PM EST, 12PM PST
+> 🇬🇧 Mon 9 Mar · 8PM GMT
 > **💻 Platform:** Zoom (link below)
 > **🔗 Zoom Link:** https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1
 
@@ -108,7 +109,9 @@ When you have your PKS set up:
 
 **Your seat details:**
 
-> **📅 Tuesday 10 March 2026 · 7:00 AM AEDT**
+> 🇦🇺 Tue 10 Mar · 7AM AEDT, 6AM AEST
+> 🇺🇸 Mon 9 Mar · 3PM EST, 12PM PST
+> 🇬🇧 Mon 9 Mar · 8PM GMT
 > **🔗 Zoom Link:** https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1
 
 Add to calendar if you haven't yet → [Google] [Apple] [Outlook]
@@ -155,14 +158,9 @@ If you miss it, you miss it.
 
 **Tomorrow's details:**
 
-> **📅 Tuesday 10 March 2026 · 7:00 AM AEDT**
->
-> | Timezone | Time |
-> |----------|------|
-> | Sydney (AEDT) | Tue 10 Mar · 7:00 AM |
-> | London (GMT) | Mon 9 Mar · 8:00 PM |
-> | New York (EST) | Mon 9 Mar · 3:00 PM |
-> | Los Angeles (PST) | Mon 9 Mar · 12:00 PM |
+> 🇦🇺 Tue 10 Mar · 7AM AEDT, 6AM AEST
+> 🇺🇸 Mon 9 Mar · 3PM EST, 12PM PST
+> 🇬🇧 Mon 9 Mar · 8PM GMT
 >
 > **🔗 Zoom Link:** https://us06web.zoom.us/j/82053483549?pwd=zuewmNgytKk4aTXqBWlpQqF46kxukF.1
 
@@ -200,7 +198,11 @@ Click it, test it, and save it somewhere you'll find it in two hours.
 2. **Clear 45 minutes** in your calendar — no calls, no clients, no interruptions
 3. **Get your setup ready** — a notepad, your laptop, maybe a coffee
 
-The session runs from **7:00 AM to approximately 7:45 AM AEDT**, followed by live Q&A.
+The session runs for 45 minutes followed by live Q&A:
+
+> 🇦🇺 Tue 10 Mar · 7AM AEDT, 6AM AEST
+> 🇺🇸 Mon 9 Mar · 3PM EST, 12PM PST
+> 🇬🇧 Mon 9 Mar · 8PM GMT
 
 ---
 

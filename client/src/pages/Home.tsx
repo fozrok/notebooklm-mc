@@ -115,10 +115,11 @@ function YourTimePill() {
 
 function TimezoneRow() {
   const zones = [
-    { label: "Sydney (AEDT)", time: "Tue 10 Mar · 7:00 AM" },
-    { label: "London (GMT)", time: "Mon 9 Mar · 8:00 PM" },
-    { label: "New York (EST)", time: "Mon 9 Mar · 3:00 PM" },
-    { label: "Los Angeles (PST)", time: "Mon 9 Mar · 12:00 PM" },
+    { label: "🇦🇺 AEDT", time: "Tue 10 Mar · 7AM" },
+    { label: "🇦🇺 AEST", time: "Tue 10 Mar · 6AM" },
+    { label: "🇺🇸 EST", time: "Mon 9 Mar · 3PM" },
+    { label: "🇺🇸 PST", time: "Mon 9 Mar · 12PM" },
+    { label: "🇬🇧 GMT", time: "Mon 9 Mar · 8PM" },
   ];
   return (
     <div className="flex flex-wrap justify-center gap-3">

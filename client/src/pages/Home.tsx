@@ -492,10 +492,9 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
               {/* Avatar */}
               <div className="relative shrink-0">
-                <div className="w-32 h-32 rounded-full overflow-hidden"
-                  style={{ border: "2px solid rgba(212,168,71,0.4)", boxShadow: "0 0 30px rgba(212,168,71,0.2)" }}>
-                  <img src="https://i.ibb.co/zDgr3bv/shane-profile.png" alt="Shane Fozard" className="w-full h-full object-cover" />
-                </div>
+                <img src="https://i.ibb.co/zDgr3bv/shane-profile.png" alt="Shane Fozard"
+                  className="w-48 rounded-2xl object-cover"
+                  style={{ border: "1px solid rgba(212,168,71,0.3)", boxShadow: "0 0 30px rgba(212,168,71,0.15)" }} />
               </div>
               {/* Bio */}
               <div className="flex flex-col gap-3 text-center md:text-left">

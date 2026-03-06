@@ -347,7 +347,7 @@ export default function ThankYou() {
               <p className="text-sm" style={{ color: "rgba(240,237,230,0.65)", fontFamily: "var(--font-body)" }}>
                 To make sure you receive all future updates, mark the email as{" "}
                 <strong style={{ color: "#F0EDE6" }}>Not Spam</strong> and add{" "}
-                <strong style={{ color: "#F0EDE6" }}>shane@shanefozard.com</strong> to your contacts.
+                <strong style={{ color: "#F0EDE6" }}>support@reachingimpact.com</strong> to your contacts.
               </p>
             </div>
           </StepCard>

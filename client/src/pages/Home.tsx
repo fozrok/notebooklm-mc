@@ -69,10 +69,14 @@ function DigitBlock({ value, label }: { value: number; label: string }) {
 }
 
 // ── What you'll learn card ────────────────────────────────────────────────────
-function LearnCard({ number, title, description }: { number: string; title: string; description: string }) {
+function LearnCard({ number, title, description, image }: { number: string; title: string; description: string; image?: string }) {
   return (
     <div className="reveal border-gold-glow rounded-xl p-6 flex flex-col gap-3 transition-all duration-300 hover:bg-white/5"
       style={{ background: "rgba(30,27,75,0.5)", backdropFilter: "blur(8px)" }}>
+      {image && (
+        <img src={image} alt={title} className="w-full rounded-lg"
+          style={{ border: "1px solid rgba(212,168,71,0.15)" }} />
+      )}
       <div className="flex items-start gap-4">
         <span className="text-4xl font-bold shrink-0" style={{ fontFamily: "var(--font-mono)", color: "rgba(212,168,71,0.3)", lineHeight: 1 }}>
           {number}
@@ -309,8 +313,7 @@ export default function Home() {
               {/* Subheadline */}
               <p className="animate-fade-up-delay-2 text-lg leading-relaxed max-w-lg"
                 style={{ color: "rgba(240,237,230,0.8)", fontFamily: "var(--font-body)", fontWeight: 300 }}>
-                The free AI tool that will polish your practice, amplify your expertise, and give your business a professional edge. Part of the{" "}
-                <span style={{ color: "rgba(212,168,71,0.95)" }}>AI-Assisted 6-Figure Hypnosis Business Collective</span> — starting this Tuesday.
+                The free AI tool that will polish your practice, amplify your expertise, and give your business a professional edge.
               </p>
 
               {/* Price signal */}
@@ -397,16 +400,19 @@ export default function Home() {
               number="01"
               title="Your Personal Knowledge Stack (PKS)"
               description="Turn your services, offers, research, articles, and videos into one AI-powered knowledge base. Stop digging through notes and start answering clients, creating content, and positioning yourself as the go-to expert — so you can charge what you're worth."
+              image="https://i.ibb.co/6c7ZyFvN/notebooklm-uc1.png"
             />
             <LearnCard
               number="02"
               title="Pro Visual Content From Your PKS"
               description="Use NotebookLM to generate infographics, presentations, and video scripts that are 100% grounded in your own methodology. Look premium and consistent everywhere you show up — without a designer or hours of guesswork."
+              image="https://i.ibb.co/x87zdTbh/notebooklm-uc2.png"
             />
             <LearnCard
               number="03"
               title="NotebookLM + ChatGPT, Claude & Gemini"
               description="Combine NotebookLM with ChatGPT, Claude, or Gemini to get advanced workflows and full access to your PKS inside the tools you already use. More power, less fragmentation — so you can focus on high-ticket work, not busywork."
+              image="https://i.ibb.co/Q75WLdHv/notebooklm-uc3.png"
             />
           </div>
         </div>
@@ -417,7 +423,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div className="reveal">
-              <img src={NOTEBOOK_GRAPHIC} alt="NotebookLM AI Knowledge Graph" className="w-full rounded-2xl"
+              <img src="https://i.ibb.co/chnXPMT8/notebooklm-diagrm.png" alt="NotebookLM AI Knowledge Graph" className="w-full rounded-2xl"
                 style={{ border: "1px solid rgba(212,168,71,0.2)", boxShadow: "0 20px 60px rgba(0,0,0,0.5)" }} />
             </div>
             <div className="reveal flex flex-col gap-5">
@@ -488,7 +494,7 @@ export default function Home() {
               <div className="relative shrink-0">
                 <div className="w-32 h-32 rounded-full overflow-hidden"
                   style={{ border: "2px solid rgba(212,168,71,0.4)", boxShadow: "0 0 30px rgba(212,168,71,0.2)" }}>
-                  <img src={AVATAR_RING} alt="Shane Fozard" className="w-full h-full object-cover" />
+                  <img src="https://i.ibb.co/zDgr3bv/shane-profile.png" alt="Shane Fozard" className="w-full h-full object-cover" />
                 </div>
               </div>
               {/* Bio */}

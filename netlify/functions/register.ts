@@ -27,7 +27,7 @@ const handler: Handler = async (event) => {
   const payload = {
     firstName,
     email,
-    source: "Hypno Masterclass Registration",
+    source: "NotebookLM-masterclass",
   };
 
   try {

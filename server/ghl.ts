@@ -11,7 +11,7 @@ export async function submitOptIn(firstName: string, email: string): Promise<voi
   const payload = {
     firstName: firstName.trim(),
     email: email.trim(),
-    source: "Hypno Masterclass Registration",
+    source: "NotebookLM-masterclass",
   };
 
   if (GHL_WEBHOOK_URL) {

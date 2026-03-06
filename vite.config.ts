@@ -188,7 +188,7 @@ function vitePluginGhlRegister(): Plugin {
             const webhookUrl = process.env.GHL_WEBHOOK_URL;
             const apiKey = process.env.GHL_API_KEY;
             const locationId = process.env.GHL_LOCATION_ID;
-            const payload = { firstName, email, source: "Hypno Masterclass Registration" };
+            const payload = { firstName, email, source: "NotebookLM-masterclass" };
 
             if (webhookUrl) {
               const r = await fetch(webhookUrl, {

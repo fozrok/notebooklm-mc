@@ -1,0 +1,199 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Nunito Sans', system-ui, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.12 0.03 280);
+  --foreground: oklch(0.93 0.01 80);
+  --card: oklch(0.16 0.035 278);
+  --card-foreground: oklch(0.93 0.01 80);
+  --popover: oklch(0.16 0.035 278);
+  --popover-foreground: oklch(0.93 0.01 80);
+  --primary: oklch(0.75 0.12 75);
+  --primary-foreground: oklch(0.12 0.03 280);
+  --secondary: oklch(0.20 0.04 278);
+  --secondary-foreground: oklch(0.85 0.01 80);
+  --muted: oklch(0.18 0.03 278);
+  --muted-foreground: oklch(0.65 0.02 280);
+  --accent: oklch(0.75 0.12 75);
+  --accent-foreground: oklch(0.12 0.03 280);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.75 0.12 75);
+  --gold: oklch(0.75 0.12 75);
+  --gold-light: oklch(0.85 0.10 78);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1200px;
+    }
+  }
+
+  /* Gold gradient text utility */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #D4A847 0%, #F0D080 50%, #C9903A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glowing gold border */
+  .border-gold-glow {
+    border: 1px solid rgba(212, 168, 71, 0.4);
+    box-shadow: 0 0 20px rgba(212, 168, 71, 0.1), inset 0 0 20px rgba(212, 168, 71, 0.03);
+  }
+
+  /* Shimmer animation for CTA button */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transform: skewX(-20deg);
+    transition: none;
+  }
+  .btn-shimmer:hover::after {
+    animation: shimmer 0.6s ease forwards;
+  }
+  @keyframes shimmer {
+    to { left: 150%; }
+  }
+
+  /* Countdown flip card */
+  .flip-digit {
+    font-family: var(--font-mono);
+    background: oklch(0.18 0.04 278);
+    border: 1px solid rgba(212, 168, 71, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  /* Strikethrough price */
+  .price-original {
+    text-decoration: line-through;
+    text-decoration-color: rgba(212, 168, 71, 0.6);
+    text-decoration-thickness: 2px;
+  }
+
+  /* Pulse animation for urgency badge */
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 168, 71, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(212, 168, 71, 0); }
+  }
+  .pulse-gold {
+    animation: pulse-gold 2s ease-in-out infinite;
+  }
+
+  /* Fade up entrance animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.7s ease forwards;
+  }
+  .animate-fade-up-delay-1 { animation: fadeUp 0.7s 0.15s ease both; }
+  .animate-fade-up-delay-2 { animation: fadeUp 0.7s 0.30s ease both; }
+  .animate-fade-up-delay-3 { animation: fadeUp 0.7s 0.45s ease both; }
+  .animate-fade-up-delay-4 { animation: fadeUp 0.7s 0.60s ease both; }
+  .animate-fade-up-delay-5 { animation: fadeUp 0.7s 0.75s ease both; }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

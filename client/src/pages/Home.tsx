@@ -12,7 +12,7 @@ import { useLocation } from "wouter";
 
 // ── Testimonials ──────────────────────────────────────────────────────────────
 const TESTIMONIALS = [
-  { name: "Lawrence Akers", quote: "When it comes to AI in the hypnotherapy world, the one person I ALWAYS recommend them to is Shane Fozard. Shane is easily one of the most invested and innovative when it comes to AI and generous in his sharing of that knowledge." },
+  { name: "Lawrence Akers — Founder of the Hypnotherapists Networking Group", quote: "When it comes to AI in the hypnotherapy world, the one person I ALWAYS recommend them to is Shane Fozard. Shane is easily one of the most invested and innovative when it comes to AI and generous in his sharing of that knowledge." },
   { name: "Vicki Walsh-Bud", quote: "Help your business move forward with some AI knowledge from Shane. In just over an hour of your time you will save so much work time in the future with this info, watch it now you won't regret it. Amazing session Shane, thank you." },
   { name: "Mark Engel", quote: "Very informative intro to using NotebookLM! Lots of great stuff here, will have to watch a few times to get all the info in it." },
   { name: "Mathias Philippe", quote: "Awesome masterclass, fast and informative for our business, and sweet spot, it makes infographics trendy again!" },
@@ -64,12 +64,27 @@ function LearnCard({ number, title, description, image }: { number: string; titl
 }
 
 // ── Testimonial components ────────────────────────────────────────────────────
+const StarIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="#D4A847" stroke="#D4A847" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+);
+
+function TestimonialStars() {
+  return (
+    <div className="flex gap-0.5 mb-2" aria-hidden>
+      {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
+    </div>
+  );
+}
+
 function TestimonialQuote({ name, quote, compact = false }: { name: string; quote: string; compact?: boolean }) {
   return (
     <div
       className={compact ? "py-2" : "py-4"}
       style={{ borderLeft: "3px solid rgba(212,168,71,0.5)", paddingLeft: compact ? 12 : 16 }}
     >
+      <TestimonialStars />
       <p
         className={compact ? "text-sm italic" : "text-base italic"}
         style={{ color: "rgba(240,237,230,0.9)", fontFamily: "var(--font-body)" }}
@@ -93,6 +108,7 @@ function TestimonialCard({ name, quote }: { name: string; quote: string }) {
         backdropFilter: "blur(8px)",
       }}
     >
+      <TestimonialStars />
       <p className="text-sm leading-relaxed" style={{ color: "rgba(240,237,230,0.85)", fontFamily: "var(--font-body)" }}>
         "{quote}"
       </p>
@@ -236,14 +252,14 @@ export default function Home() {
       </div>
 
       {/* ── HERO SECTION ── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "92vh" }}>
+      <section className="relative overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover" style={{ opacity: 0.75 }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(13,11,46,0.15) 0%, rgba(13,11,46,0.55) 50%, rgba(13,11,46,0.98) 100%)" }} />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 pt-16 pb-8">
+        <div className="relative z-10 container mx-auto px-4 pt-12 pb-12 md:pb-16">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
 
             {/* ── LEFT: Headline & Info ── */}
@@ -331,7 +347,7 @@ export default function Home() {
       </section>
 
       {/* ── WHAT YOU'LL LEARN ── */}
-      <section className="py-20" style={{ background: "rgba(18,16,58,0.6)" }}>
+      <section className="py-16 md:py-20" style={{ background: "rgba(18,16,58,0.6)" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 reveal">
             <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "rgba(212,168,71,0.8)", fontFamily: "var(--font-mono)" }}>
